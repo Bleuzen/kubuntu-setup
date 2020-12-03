@@ -53,24 +53,24 @@ SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 EOF
 
-mkdir -p /home/$USER/.config/fish/functions
-
-cat > /home/$USER/.config/fish/functions/fish_prompt.fish <<EOF
-function fish_prompt
-    if test -n "$SSH_TTY"
-        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
-    end
-
-    echo -n (set_color blue)(prompt_pwd)' '
-
-    set_color -o
-    if test "$USER" = 'root'
-        echo -n (set_color red)'# '
-    end
-    echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
-    set_color normal
-end
-EOF
+# mkdir -p /home/$USER/.config/fish/functions
+# 
+# cat > /home/$USER/.config/fish/functions/fish_prompt.fish <<EOF
+# function fish_prompt
+#     if test -n "$SSH_TTY"
+#         echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
+#     end
+# 
+#     echo -n (set_color blue)(prompt_pwd)' '
+# 
+#     set_color -o
+#     if test "$USER" = 'root'
+#         echo -n (set_color red)'# '
+#     end
+#     echo -n (set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+#     set_color normal
+# end
+# EOF
 
 
 ### Global Shortcuts ###
