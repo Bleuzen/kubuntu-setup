@@ -81,7 +81,6 @@ kwriteconfig5 --file "/home/$USER/.local/share/konsole/Default.profile" --group 
 kwriteconfig5 --file "/home/$USER/.config/konsolerc" --group "Desktop Entry" --key "DefaultProfile" --type string "Default.profile"
 
 cat > /home/$USER/.zshrc <<EOF
-
 autoload -Uz promptinit
 promptinit
 prompt adam1
