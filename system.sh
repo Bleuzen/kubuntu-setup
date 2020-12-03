@@ -41,6 +41,10 @@ function install_fish_shell {
     apt install -y fish
 }
 
+function install_zsh_shell {
+    apt install -y zsh zsh-autosuggestions zsh-syntax-highlighting zsh-theme-powerlevel9k
+}
+
 function install_themes {
     apt install -y materia-kde materia-gtk-theme papirus-icon-theme
 }
@@ -51,5 +55,6 @@ update_system
 install_german_language_packs
 autoinstall_drivers
 install_flatpak
-install_fish_shell
+# install_fish_shell
+install_zsh_shell
 install_themes
