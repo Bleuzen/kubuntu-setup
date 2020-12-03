@@ -23,8 +23,13 @@ function update_system {
     apt update && apt upgrade -y
 }
 
+function install_german_language_packs {
+    apt install -y language-pack-de language-pack-gnome-de
+    apt install -y $(check-language-support de)
+}
+
 function autoinstall_drivers {
-    ubuntu-drivers autoinstall
+    ubuntu-drivers install
 }
 
 function install_flatpak {
@@ -36,9 +41,15 @@ function install_fish_shell {
     apt install -y fish
 }
 
+function install_themes {
+    apt install -y materia-kde materia-gtk-theme papirus-icon-theme
+}
+
 disable_data_collection
 ban_snap
 update_system
+install_german_language_packs
 autoinstall_drivers
 install_flatpak
 install_fish_shell
+install_themes
