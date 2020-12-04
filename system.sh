@@ -49,6 +49,10 @@ function install_themes {
     apt install -y materia-kde materia-gtk-theme papirus-icon-theme
 }
 
+function make_python3_default {
+    apt install -y python-is-python3
+}
+
 disable_data_collection
 ban_snap
 update_system
@@ -58,3 +62,4 @@ install_flatpak
 # install_fish_shell
 install_zsh_shell
 install_themes
+make_python3_default
